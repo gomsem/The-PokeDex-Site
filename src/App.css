@@ -1,33 +1,180 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+html
+{
+  scroll-behavior: smooth;
+}
+/* Master Container */
+.ultra
+{
+  overflow: hidden;
+}
+/* /Master Container */
+
+/* PokeNavbar */
+.navbar
+{
+  background-color: red;
+  width:100%;
+  left:0;
+  top:0;
+  position:fixed;
+  z-index:10;
+}
+
+.logodex
+{
+  width: 130px;
+  height: 50px;
+}
+
+.nav-link
+{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font: bold;
+}
+
+.nav-link:hover
+{
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+  font: bold;
+}
+/* /PokeNavbar */
+
+/* First Section */
+.welcome
+{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url('./assets/images/pokemon-banner.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.welcome:before
+{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .7;
+  background: linear-gradient(270deg, #FF5252 -10.32%, #685CFC 100%);
+}
+/* /First Section */
+
+/* Second Section */
+.content
+{
+  background-color: rgb(95, 200, 21);
+}
+
+.title-content
+{
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
+  padding-top: 40px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 90px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-shadow: -2px 0 0 #fdff2a,
+    -4px 0 0 #df4a42,
+    2px 0 0 #91fcfe,
+    4px 0 0 #4405fc;
+  animation: blink 1s steps(4, start) infinite;
+  padding-top: 85px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.content-list
+{
+  padding-top: 70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.poke-card
+{
+  max-width: 250px; 
+}
+
+.poke-card:hover
+{
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+              0 10px 10px rgba(0, 0, 0, 0.22);   
+}
+
+.card-header
+{
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.card-body
+{
+  font-family: 'Press Start 2P', cursive;
+}
+
+.letter-size
+{
+  font-size: 20px;
+}
+
+.card-image
+{
+  width: 110px;
+  height: 110px;
+}
+
+.modal-content
+{
+  background-color: #33B3FF;
+}
+
+.modal-header
+{
+  background-color: #33B3FF;
+  border: #33B3FF;
+}
+
+.modal-footer
+{
+  background-color: #33B3FF;
+  border: #33B3FF;
+}
+
+.modal-card-title
+{
   color: white;
 }
+/* /Second Section */  
 
-.App-link {
-  color: #61dafb;
+/* Footer */
+.footer
+{
+  background-color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.logo-footer
+{
+  width: 130px;
+  height: 50px;
+}
+/* /Footer */
+
+@keyframes blink{
+  to{
+    visibility: hidden;
   }
 }
+  
